@@ -11,7 +11,7 @@ with open('imgres.json', 'r') as f:
 @bot.event
 async def on_ready():
     await airo.change_presence(status=discord.Status.online, activity=discord.Game("-help"))
-    print("봇 실행됨!")
+    print("Ai-RO Bot Successfully Initiallized.")
     print(client.user.name)
     print(client.user.id)
 
