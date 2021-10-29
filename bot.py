@@ -14,8 +14,8 @@ with open('imgres.json', 'r') as f:
 async def on_ready():
     await airo.change_presence(status=discord.Status.online, activity=discord.Game("-help"))
     print("Ai-RO Bot Successfully Initiallized.")
-    print(client.user.name)
-    print(client.user.id)
+    print(airo.user.name)
+    print(airo.user.id)
 
 @bot.command()
 async def embed(ctx):
