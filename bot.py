@@ -9,5 +9,5 @@ token = os.environ['token']
 async def embed(ctx):
     embed = discord.Embed(title="sample embed", url="", description="봇에 임베드 삽입을 테스트 중입니다.", color=discord.Color.blue())
 
-client.run(token)
+bot.run(token)
 
