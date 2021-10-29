@@ -16,8 +16,8 @@ async def on_ready():
     print("[SYS] Ai-RO Bot Successfully Initiallized.")
 
 @airo.command()
-async def embed(ctx):
-    embed = discord.Embed(title="sample embed", description="봇에 임베드 삽입을 테스트 중입니다.", color=discord.Color.blue())
+async def embed(ctx, name):
+    embed = discord.Embed(title=name, description="봇에 임베드 삽입을 테스트 중입니다.", color=discord.Color.blue())
     embed.set_image(url="http://yuuki0psp.dothome.co.kr/botimg/mustmarry.png")
     embed.set_footer(text="하단 설명")
     await ctx.send(embed=embed)
@@ -31,6 +31,14 @@ async def command_slash(ctx:SlashContext):
     embed = discord.Embed(title="slash!", url="", description="testing slash..", color=discord.Color.blue())
     embed.set_footer(text="하단 설명")
     await ctx.send(embed=embed)
+    
+@slash.slash(
+    name="gaysamul",
+    description="simple slash test.",
+    guild_ids=[865433697657946133]
+)
+async def _gaysamul(ctx:SlashContext):
+    def embed(ctx, name=gaysamul)
 
 
 
