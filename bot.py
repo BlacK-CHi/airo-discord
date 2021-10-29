@@ -15,6 +15,8 @@ def embed_base(name):
     embed = discord.Embed(title=name, description="봇에 임베드 삽입을 테스트 중입니다.", color=discord.Color.blue())
     embed.set_image(url="http://yuuki0psp.dothome.co.kr/botimg/mustmarry.png")
     embed.set_footer(text="하단 설명")
+    embed=embed_finish
+    
     return embed_finish
 
 @airo.event
