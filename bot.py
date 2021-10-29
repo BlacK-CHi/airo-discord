@@ -16,6 +16,7 @@ def embed_base(name):
     embed.set_image(url="http://yuuki0psp.dothome.co.kr/botimg/mustmarry.png")
     embed.set_footer(text="하단 설명")
 
+
 @airo.event
 async def on_ready():
     print("[SYS] Ai-RO Bot Successfully Initiallized.")
@@ -43,7 +44,8 @@ async def command_slash(ctx:SlashContext):
     guild_ids=[865433697657946133]
 )
 async def _gaysamul(ctx:SlashContext):
-    await ctx.send(embed=embed_base(name='gaysamul'))
+    embed_res=embed_base(name='gaysamul')
+    await ctx.send(embed=embed_res)
 
 
 
