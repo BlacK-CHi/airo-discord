@@ -4,7 +4,7 @@ from discord.ext import commands
 import datetime
 
 bot = commands.Bot(command_prefix='>>', description='생일을 관리하고 자동으로 축하해드리는 봇이에요!', status=discord.Status.online, activity=discord.Game(">>help로 도움말을 출력!"))
-token = "ODkzNDg2MTY3NTE1ODczMzQx.YVcJ1g.p2wUYR1qmQJgYEgWSO_uEWAifQM"
+token = "ODkzNDg2MTY3NTE1ODczMzQx.YVcJ1g.5KSMHnraMGWQDkLXYozzVPG2D_A"
 
 @bot.command(aliases=['임베드'])
 async def embed(ctx):
