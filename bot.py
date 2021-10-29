@@ -38,7 +38,7 @@ async def command_slash(ctx:SlashContext):
     guild_ids=[865433697657946133]
 )
 async def _gaysamul(ctx:SlashContext):
-    embed(ctx, name=gaysamul)
+    embed(ctx, name='gaysamul')
 
 
 
