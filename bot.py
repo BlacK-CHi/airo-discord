@@ -17,7 +17,9 @@ async def on_ready():
 
 @airo.command()
 async def embed(ctx):
-    embed = discord.Embed(title="sample embed", url="", description="봇에 임베드 삽입을 테스트 중입니다.", color=discord.Color.blue())
+    embed = discord.Embed(title="sample embed", description="봇에 임베드 삽입을 테스트 중입니다.", color=discord.Color.blue())
+    embed.set_image(url="http://yuuki0psp.dothome.co.kr/botimg/mustmarry.png")
+    embed.set_footer(text="하단 설명")
     await ctx.send(embed=embed)
 
 @slash.slash(
@@ -27,7 +29,9 @@ async def embed(ctx):
 )
 async def command_slash(ctx:SlashContext):
     embed = discord.Embed(title="slash!", url="", description="testing slash..", color=discord.Color.blue())
+    embed.set_footer(text="하단 설명")
     await ctx.send(embed=embed)
+
 
 
 
