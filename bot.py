@@ -12,9 +12,10 @@ with open('imgres.json', 'r') as f:
     img_list = json.load(f)
     print("[SYS] Image Database Successfully Loaded!")
 
-def embed_base(name):
+def embed_base(foo):
     embed = discord.Embed(title=name, color=discord.Color.blue())
     embed.set_footer(text="하단 설명")
+    return embed
 
 @airo.event
 async def on_ready():
@@ -36,9 +37,8 @@ async def command_slash(ctx:SlashContext):
     description="simple slash test.",
     guild_ids=[gid]
 )
-async def _aaa(ctx:SlashContext):
-    embed_res=embed_base(name='aaa')
-    await ctx.send(embed=embed_res)
+async def _aaa(ctx:SlashContext, embed_base, embedded):
+    await ctx.send(embed=embed_base(name='foo'))
 
 
 
