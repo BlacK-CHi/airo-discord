@@ -12,7 +12,7 @@ with open('imgres.json', 'r') as f:
     img_list = json.load(f)
     print("[SYS] Image Database Successfully Loaded!")
 
-def embed_base(foo):
+def embed_base(name):
     embed = discord.Embed(title=name, color=discord.Color.blue())
     embed.set_footer(text="하단 설명")
     return embed
