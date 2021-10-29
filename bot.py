@@ -1,9 +1,19 @@
-import os
-import discord
+import os, json, discord
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='-', status=discord.Status.online, activity=discord.Game("-help로 도움말을 출력!"))
+airo = discord.Client()
+bot = commands.Bot(command_prefix='-')
 token = os.environ['token']
+
+with open('imgres.json', 'r') as f:
+    img_list = json.load(f)
+    
+@bot.event
+async def on_ready():
+    await airo.change_presence(status=discord.Status.online, activity=discord.Game("-help"))
+    print("봇 실행됨!")
+    print(client.user.name)
+    print(client.user.id)
 
 @bot.command()
 async def embed(ctx):
