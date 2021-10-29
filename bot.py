@@ -10,7 +10,13 @@ slash = SlashCommand(airo, sync_commands=True)
 with open('imgres.json', 'r') as f:
     img_list = json.load(f)
     print("[SYS] Image Database Successfully Loaded!")
-    
+
+def embed_base(name):
+    embed = discord.Embed(title=name, description="봇에 임베드 삽입을 테스트 중입니다.", color=discord.Color.blue())
+    embed.set_image(url="http://yuuki0psp.dothome.co.kr/botimg/mustmarry.png")
+    embed.set_footer(text="하단 설명")
+    return embed_finish
+
 @airo.event
 async def on_ready():
     print("[SYS] Ai-RO Bot Successfully Initiallized.")
@@ -38,7 +44,8 @@ async def command_slash(ctx:SlashContext):
     guild_ids=[865433697657946133]
 )
 async def _gaysamul(ctx:SlashContext):
-    embed(ctx, name='gaysamul')
+    embed_base(name='gaysamul')
+    await ctx.send(embed=embed_finish)
 
 
 
