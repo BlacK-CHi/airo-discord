@@ -25,7 +25,7 @@ async def embed(ctx):
 @slash.slash(
     name="slash",
     description="simple slash test.",
-    guild_ids=[]
+    guild_ids=['865433697657946133']
 )
 async def command_slash(ctx):
     embed = discord.Embed(title="slash!", url="", description="testing slash..", color=discord.Color.blue())
