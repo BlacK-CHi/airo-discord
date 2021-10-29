@@ -2,19 +2,17 @@ import os, json, discord
 from discord.ext import commands
 from discord_slash import SlashCommand
 
-airo = discord.Client()
-bot = commands.Bot(command_prefix='>>', description='!', status=discord.Status.online, activity=discord.Game(">>help로 도움말을 출력!"))
+bot = commands.Bot(command_prefix='+', description='Test', status=discord.Status.online, activity=discord.Game("Testing!"))
 token = os.environ['token']
-slash = SlashCommand(bot, sync_commands=True)
+slash = SlashCommand(bot)
 
 with open('imgres.json', 'r') as f:
     img_list = json.load(f)
+    print("[SYS] Image Database Successfully Loaded!")
     
 @bot.event
 async def on_ready():
-    print("Ai-RO Bot Successfully Initiallized.")
-    print(airo.user.name)
-    print(airo.user.id)
+    print("[SYS] Ai-RO Bot Successfully Initiallized.")
 
 @bot.command()
 async def embed(ctx):
@@ -29,6 +27,8 @@ async def embed(ctx):
 async def command_slash(ctx):
     embed = discord.Embed(title="slash!", url="", description="testing slash..", color=discord.Color.blue())
     await ctx.send(embed=embed)
+
+
 
 bot.run(token)
 
