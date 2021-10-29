@@ -37,7 +37,7 @@ async def command_slash(ctx:SlashContext):
     description="simple slash test.",
     guild_ids=[gid]
 )
-async def _aaa(ctx:SlashContext, embed_base, embedded):
+async def _aaa(ctx:SlashContext):
     await ctx.send(embed=embed_base(name='foo'))
 
 
