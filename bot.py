@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord_slash import SlashCommand
 
 airo = discord.Client()
-bot = commands.Bot(command_prefix='-')
+bot = commands.Bot(command_prefix='>>', description='!', status=discord.Status.online, activity=discord.Game(">>help로 도움말을 출력!"))
 token = os.environ['token']
 slash = SlashCommand(bot, sync_commands=True)
 
