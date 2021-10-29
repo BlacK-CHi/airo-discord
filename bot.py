@@ -1,7 +1,7 @@
 import os, json, discord
 from discord.ext import commands
 from discord_slash import SlashCommand, SlashContext
-from discord_slash,.utils.manage_commands import create_choice, create_option
+from discord_slash.utils.manage_commands import create_choice, create_option
 
 airo = commands.Bot(command_prefix='+', description='Test', status=discord.Status.online, activity=discord.Game("Testing!"))
 token = os.environ['token']
