@@ -22,7 +22,8 @@ with open('imgres.json', 'r') as f:
 #임베드 뼈대용 함수 (명령어 단계에서 호출됨)
 def embed_base(name):
     embed = discord.Embed(title=name, color=discord.Color.blue())
-    embed.set_footer(text="하단 설명")
+	embed.set_image(url=img_list[name])   
+	embed.set_footer(text="하단 설명", icon_url="")   
     return embed
 
 
@@ -33,14 +34,75 @@ async def on_ready():
 
    
 #여가서부터 명령어 작성하기!
+
+#님캐결혼
 @slash.slash(
-    name="aaa",
-    description="simple slash test.",
+    name="님캐결혼",
+    description="님 캐. 나랑. 결혼.",
     guild_ids=[gid]
 )
-async def _aaa(ctx:SlashContext):
-    await ctx.send(embed=embed_base(name='foo'))
+async def _mustmarry(ctx:SlashContext):
+    await ctx.send(embed=embed_base(name='mustmarry'))
+
+#결혼식 초대짤
+@slash.slash(
+    name="결혼식",
+    description="저.. 어머님 제가 어머님 자캐하고 결혼식을 하는데 참석해주세요",
+    guild_ids=[gid]
+)
+async def _wantmarry(ctx:SlashContext):
+    await ctx.send(embed=embed_base(name='wantmarry'))
+    
+#월요일 싫어
+@slash.slash(
+    name="월요일",
+    description="월요일.. 그것은 개쓰레기요일.",
+    guild_ids=[gid]
+)
+async def _monday(ctx:SlashContext):
+    await ctx.send(embed=embed_base(name='whymonday'))
+    
+#출근 싫어
+@slash.slash(
+    name="출근싫어",
+    description="출근 싫어 (드러눕)",
+    guild_ids=[gid]
+)
+async def _nowork(ctx:SlashContext):
+    await ctx.send(embed=embed_base(name='nowork'))
+
+#존나빠름
+@slash.slash(
+    name="존나빠름",
+    description="I'm fast as fxxx boi, I'm fast as fxxx boi!!",
+    guild_ids=[gid]
+)
+async def _fastasfuck(ctx:SlashContext):
+    await ctx.send(embed=embed_base(name='fastfox'))
+    
+#여우투광등
+@slash.slash(
+    name="여우찾기빔",
+    description="이 분 어디로 가셨어요?",
+    guild_ids=[gid]
+)
+async def _foxbeam(ctx:SlashContext):
+    await ctx.send(embed=embed_base(name='foxsearch'))
+
+#드론 보노보노
+@slash.slash(
+    name="드론과제",
+    description="왜 ㅈ같은 팀원들은 자기들만 바쁘다 생각할까? 한번 ㅈ되봐라지 난 휴학테크 탈 테니까",
+    guild_ids=[gid]
+)
+async def _bonodrone(ctx:SlashContext):
+    await ctx.send(embed=embed_base(name='bonobono'))
+    
+
+    
+
+    
 
 #-------------------코드의 끝----------------------
-airo.run(token) #봇 실행(env에서 토큰 전달)
+airo.run(token)
 
