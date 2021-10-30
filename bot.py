@@ -198,6 +198,43 @@ async def _valentine(ctx:SlashContext):
 async def _boundaryofdeath(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='yujinhappy'))
 
+#A토끼 뽀담뽀담
+@slash.slash(
+	name="토끼뽀담",
+	description="토끼는 귀여워!",
+	guild_ids=[gid]
+)
+async def _tokipet(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='tokipet'))
+
+#여우도 뽀담뽀담
+@slash.slash(
+	name="여우뽀담",
+	description="여우도 귀여워!",
+	guild_ids=[gid]
+)
+async def _foxpet(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='foxpet'))
+
+#딩깅
+@slash.slash(
+	name="띵킹",
+	description="이게 맞나...? 아니 이게 맞나? 진짜? 장난 아니라?",
+	guild_ids=[gid]
+)
+async def _thonk(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='thonk'))
+
+#여우 헤드스핀
+@slash.slash(
+	name="헤드스핀",
+	description="무야호!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+	guild_ids=[gid]
+)
+async def _headspin(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='headspin'))
+
+
 #폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
 @slash.slash(
 	name="폴라뽀담",
@@ -233,42 +270,6 @@ async def _polarpet(ctx:SlashContext, speed:str='slow'): #speed의 기본값을 
 		raise ValueError('알 수 없는 옵션입니다.')
 		
 	await ctx.send(embed=embed_base(ctx=ctx, name=name)
-
-#A토끼 뽀담뽀담
-#@slash.slash(
-	#name="토끼뽀담",
-	#description="토끼는 귀여워!",
-	#guild_ids=[gid]
-#)
-#async def _tokipet(ctx:SlashContext):
-	#await ctx.send(embed=embed_base(ctx=ctx, name='tokipet'))
-
-#여우도 뽀담뽀담
-@slash.slash(
-	name="여우뽀담",
-	description="여우도 귀여워!",
-	guild_ids=[gid]
-)
-async def _foxpet(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='foxpet'))
-
-#딩깅
-@slash.slash(
-	name="띵킹",
-	description="이게 맞나...? 아니 이게 맞나? 진짜? 장난 아니라?",
-	guild_ids=[gid]
-)
-async def _thonk(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='thonk'))
-
-#여우 헤드스핀
-@slash.slash(
-	name="헤드스핀",
-	description="무야호!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-	guild_ids=[gid]
-)
-async def _headspin(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='headspin'))
 #-------------------코드의 끝----------------------
 airo.run(token)
 
