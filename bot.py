@@ -9,7 +9,7 @@ from discord_slash.utils.manage_commands import create_choice, create_option
 airo = commands.Bot(command_prefix='+', description='Test', status=discord.Status.online, activity=discord.Game("Testing!"))
 token = os.environ['token']
 slash = SlashCommand(airo, sync_commands=True)
-#gid = 865433697657946133,891712136689119242 
+gid = 865433697657946133,891712136689119242 
 
 
 #imgres.json 이미지파일 정보 데이터베이스 불러오기
@@ -40,7 +40,7 @@ async def on_ready():
 @slash.slash(
 	name="님캐결혼",
 	description="님 캐. 나랑. 결혼.",
-	#guild_ids=[gid]
+	guild_ids=[gid]
 )
 async def _mustmarry(ctx:SlashContext):
 	await ctx.send(embed=embed_base(name='mustmarry'))
@@ -49,7 +49,7 @@ async def _mustmarry(ctx:SlashContext):
 @slash.slash(
 	name="결혼식",
 	description="저.. 어머님 제가 어머님 자캐하고 결혼식을 하는데 참석해주세요",
-	#guild_ids=[gid]
+	guild_ids=[gid]
 )
 async def _wantmarry(ctx:SlashContext):
 	await ctx.send(embed=embed_base(name='wantmarry'))
@@ -58,7 +58,7 @@ async def _wantmarry(ctx:SlashContext):
 @slash.slash(
 	name="월요일",
 	description="월요일.. 그것은 개쓰레기요일.",
-	#guild_ids=[gid]
+	guild_ids=[gid]
 )
 async def _monday(ctx:SlashContext):
 	await ctx.send(embed=embed_base(name='whymonday'))
@@ -67,7 +67,7 @@ async def _monday(ctx:SlashContext):
 @slash.slash(
 	name="출근싫어",
 	description="출근 싫어 (드러눕)",
-	#guild_ids=[gid]
+	guild_ids=[gid]
 )
 async def _nowork(ctx:SlashContext):
 	await ctx.send(embed=embed_base(name='nowork'))
@@ -76,7 +76,7 @@ async def _nowork(ctx:SlashContext):
 @slash.slash(
 	name="존나빠름",
 	description="I'm fast as fxxx boi, I'm fast as fxxx boi!!",
-	#guild_ids=[gid]
+	guild_ids=[gid]
 )
 async def _fastasfuck(ctx:SlashContext):
 	await ctx.send(embed=embed_base(name='fastfox'))
@@ -85,7 +85,7 @@ async def _fastasfuck(ctx:SlashContext):
 @slash.slash(
 	name="여우찾기빔",
 	description="그래서 이 분 어디로 가셨어요?",
-	#guild_ids=[gid]
+	guild_ids=[gid]
 )
 async def _foxbeam(ctx:SlashContext):
 	await ctx.send(embed=embed_base(name='foxsearch'))
@@ -94,7 +94,7 @@ async def _foxbeam(ctx:SlashContext):
 @slash.slash(
 	name="드론과제",
 	description="왜 ㅈ같은 팀원들은 자기들만 바쁘다 생각할까? 한번 ㅈ되봐라지 난 휴학테크 탈 테니까",
-	#guild_ids=[gid]
+	guild_ids=[gid]
 )
 async def _bonodrone(ctx:SlashContext):
 	await ctx.send(embed=embed_base(name='bonobono'))
