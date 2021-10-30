@@ -99,6 +99,87 @@ async def _foxbeam(ctx:SlashContext):
 async def _bonodrone(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='bonobono'))
 
+#감자 도어슬램
+@slash.slash(
+	name="문부숨",
+	description="안나오면 쳐들어간다 (쿵짝짝쿵짝)",
+	guild_ids=[gid]
+)
+async def _doorslam(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='gamjadoor'))
+
+#퇴근
+@slash.slash(
+	name="퇴근",
+	description="퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근제발퇴근퇴근퇴근",
+	guild_ids=[gid]
+)
+async def _exitwork(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='endwork'))
+
+#출근.. 해야.. 하는거야....?
+@slash.slash(
+	name="출근감자",
+	description="출근.. 해야.. 하는거야...? (울먹)",
+	guild_ids=[gid]
+)
+async def _whywork(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='whywork'))
+
+#smol AO
+@slash.slash(
+	name="smol",
+	description="작고 소듕하고 귀여운 아오",
+	guild_ids=[gid]
+)
+async def _smol(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='aotiny'))
+
+#게이사물의 향기~
+@slash.slash(
+	name="게이사물향",
+	description="음~ 이것은 게이사물의 향기.",
+	guild_ids=[gid]
+)
+async def _gsaroma(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='gsaroma'))
+
+#트리플 :gaysamul:
+@slash.slash(
+	name="3게이사물",
+	description=":gaysamulfox: :gaysamul: :gaysamuldrone:",
+	guild_ids=[gid]
+)
+async def _3gsm(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='3gaysamul'))
+
+#거기 집게리아죠?
+@slash.slash(
+	name="아뇨",
+	description="아뇨, 드론인데요?",
+	guild_ids=[gid]
+)
+async def _nodrone(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='nodrone'))
+
+#드론프린터
+@slash.slash(
+	name="드론프린터",
+	description="(게이사물 연성 출력 중)",
+	guild_ids=[gid]
+)
+async def _droneprint(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='droneprint'))
+
+#I EAT POTATO
+@slash.slash(
+	name="POTATO",
+	description="I EAT POTATO",
+	guild_ids=[gid]
+)
+async def _eatpotato(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='eatpotato'))
+
 
 #-------------------코드의 끝----------------------
 airo.run(token)
