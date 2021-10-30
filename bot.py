@@ -231,9 +231,8 @@ async def _polarpet(ctx:SlashContext, speed:str='slow'): #speed의 기본값을 
 		name='polarpetfast'
 	else:
 		raise ValueError('알 수 없는 옵션입니다.')
-	
+		
 	await ctx.send(embed=embed_base(ctx=ctx, name=name)
- 
 
 #A토끼 뽀담뽀담
 @slash.slash(
