@@ -234,7 +234,15 @@ async def _thonk(ctx:SlashContext):
 async def _headspin(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='headspin'))
 
-
+#폴짝폴짝 뛰는 감자
+@slash.slash(
+	name="폴짝감자",
+	description="갓캐를 보고 매우 행복해하며 폴짝폴짝 뛰는 감자라고라...!",
+	guild_ids=[gid]
+)
+async def _happygamja(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='gamjahappy'))
+	
 #폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
 '''
 @slash.slash(
