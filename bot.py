@@ -236,6 +236,7 @@ async def _headspin(ctx:SlashContext):
 
 
 #폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
+'''
 @slash.slash(
 	name="폴라뽀담",
 	description="귀여운 왹져드론을 뽀담뽀담해보세요 함잡솨봐",
@@ -270,7 +271,7 @@ async def _polarpet(ctx:SlashContext, speed:str='slow'): #speed의 기본값을 
 		embed = discord.Embed(title='오류', description='정의되지 않은 명령어에요!', color=discord.Color.red())
 		embed.set_footer(text="Ai-RO nightly1.0.30 Rev.0", icon_url="https://media.discordapp.net/attachments/882195139508989993/903823602498019368/1635558712041.png")
 		await ctx.send(embed=embed)
-		
+'''
 		
 #-------------------코드의 끝----------------------
 airo.run(token)
