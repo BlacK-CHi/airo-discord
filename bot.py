@@ -186,10 +186,53 @@ async def _eatpotato(ctx:SlashContext):
 	description="부장님! 이게 말이 된다고 생각하십니까!",
 	guild_ids=[gid]
 )
-async def _bonodrone(ctx:SlashContext):
+async def _valentine(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='doorslayer'))
 
+#유진 : (만족)
+@slash.slash(
+	name="유진만족",
+	description="삭여라, 그리고 새겨라, 바꾸고 싶다면 사겨라. 돈과 명예, 그리고 사경이 제일인 세상이다.",
+	guild_ids=[gid]
+)
+async def _boundaryofdeath(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='yujinhappy'))
 
+#A토끼 뽀담뽀담
+@slash.slash(
+	name="토끼뽀담",
+	description="토끼는 귀여워!",
+	guild_ids=[gid]
+)
+async def _tokipet(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='tokipet'))
+
+#여우도 뽀담뽀담
+@slash.slash(
+	name="여우뽀담",
+	description="여우도 귀여워!",
+	guild_ids=[gid]
+)
+async def _foxpet(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='foxpet'))
+
+#딩깅
+@slash.slash(
+	name="띵킹",
+	description="이게 맞나...? 아니 이게 맞나? 진짜? 장난 아니라?",
+	guild_ids=[gid]
+)
+async def _thonk(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='thonk'))
+
+#여우 헤드스핀
+@slash.slash(
+	name="헤드스핀",
+	description="무야호!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+	guild_ids=[gid]
+)
+async def _headspin(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='headspin'))
 #-------------------코드의 끝----------------------
 airo.run(token)
 
