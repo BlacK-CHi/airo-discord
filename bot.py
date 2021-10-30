@@ -269,6 +269,51 @@ async def _snivybeam(ctx:SlashContext):
 )
 async def _snivydead(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='snivyded'))
+	
+#fuck im hungry
+@slash.slash(
+	name="광합성",
+	description="fuck im hungry / delicious",
+	guild_ids=[gid]
+)
+async def _pthungry(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='delicious'))
+	
+#피곤한 여우
+@slash.slash(
+	name="여우피곤",
+	description="뭔가 그리곤 싶은데 피곤함",
+	guild_ids=[gid]
+)
+async def _chitired(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='chiwant'))
+	
+#피곤한 감자
+@slash.slash(
+	name="감자피곤",
+	description="뭔가 그리곤 싶은데 피곤함",
+	guild_ids=[gid]
+)
+async def _pottired(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='ptwant'))
+
+#감자가 주거써!
+@slash.slash(
+	name="흐어어억",
+	description="풀뱀이 주거써! 교수님이 주겨써!",
+	guild_ids=[gid]
+)
+async def _ptdead(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='pttired'))
+	
+#깃허브 모나 귀여움
+@slash.slash(
+	name="모나",
+	description="그냥 귀여워서 끼워넣은 깃허브 움짤",
+	guild_ids=[gid]
+)
+async def _mona(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='mona'))
 
 #폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
 '''
