@@ -235,13 +235,13 @@ async def _polarpet(ctx:SlashContext, speed:str='slow'): #speed의 기본값을 
 	await ctx.send(embed=embed_base(ctx=ctx, name=name)
 
 #A토끼 뽀담뽀담
-@slash.slash(
-	name="토끼뽀담",
-	description="토끼는 귀여워!",
-	guild_ids=[gid]
-)
-async def _tokipet(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='tokipet'))
+#@slash.slash(
+	#name="토끼뽀담",
+	#description="토끼는 귀여워!",
+	#guild_ids=[gid]
+#)
+#async def _tokipet(ctx:SlashContext):
+	#await ctx.send(embed=embed_base(ctx=ctx, name='tokipet'))
 
 #여우도 뽀담뽀담
 @slash.slash(
