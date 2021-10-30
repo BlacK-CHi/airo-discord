@@ -263,13 +263,15 @@ async def _headspin(ctx:SlashContext):
 )
 async def _polarpet(ctx:SlashContext, speed:str='slow'): #speed의 기본값을 slow로 설정해서, 아무 인자를 넣지 않아도 자동으로 천천히 뽀담뽀담
 	if speed == 'slow':
-		name='polarpet'
+		await ctx.send(embed=embed_base(ctx=ctx, name='polarpet')
 	elif speed == 'fast':
-		name='polarpetfast'
+		await ctx.send(embed=embed_base(ctx=ctx, name='polarpetfast')
 	else:
-		raise ValueError('알 수 없는 옵션입니다.')
+		embed = discord.Embed(title='오류', description='정의되지 않은 명령어에요!', color=discord.Color.red())
+		embed.set_footer(text="Ai-RO nightly1.0.30 Rev.0", icon_url="https://media.discordapp.net/attachments/882195139508989993/903823602498019368/1635558712041.png")
+		await ctx.send(embed=embed)
 		
-	await ctx.send(embed=embed_base(ctx=ctx, name=name)
+		
 #-------------------코드의 끝----------------------
 airo.run(token)
 
