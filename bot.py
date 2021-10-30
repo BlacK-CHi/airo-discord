@@ -251,12 +251,12 @@ async def _headspin(ctx:SlashContext):
 					value='slow'
 				),
 				create_choice(
-  					name='빠르게',
+					name='빠르게',
 					value='fast'
 				)
 			]
 		)
- 	],
+	],
 	connector={
 		'속도': 'speed' #속도로 받은 value값을 speed라는 변수로 처리해야 명령어에서 받을 수 있음!
 	}
