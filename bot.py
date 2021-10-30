@@ -9,7 +9,7 @@ from discord_slash.utils.manage_commands import create_choice, create_option
 airo = commands.Bot(command_prefix='+', description='Test', status=discord.Status.online, activity=discord.Game("Testing!"))
 token = os.environ['token']
 slash = SlashCommand(airo, sync_commands=True)
-gid = [865433697657946133,891712136689119242]
+gid = 891712136689119242
 
 
 #imgres.json 이미지파일 정보 데이터베이스 불러오기
