@@ -106,7 +106,7 @@ async def _bonodrone(ctx:SlashContext):
 	guild_ids=[gid]
 )
 async def _doorslam(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='gamjadoor'))
+	await ctx.send(embed=embed_base(ctx=ctx, name='doorgamja'))
 
 #퇴근
 @slash.slash(
@@ -179,6 +179,15 @@ async def _droneprint(ctx:SlashContext):
 )
 async def _eatpotato(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='eatpotato'))
+
+#부장님!
+@slash.slash(
+	name="부장님",
+	description="부장님! 이게 말이 된다고 생각하십니까!",
+	guild_ids=[gid]
+)
+async def _bonodrone(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='doorslayer'))
 
 
 #-------------------코드의 끝----------------------
