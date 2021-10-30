@@ -24,7 +24,7 @@ def embed_base(ctx,name):
 	embed = discord.Embed(color=discord.Color.blue())
 	embed.set_author(name=ctx.author.display_name, icon_url=ctx.author.avatar_url)
 	embed.set_image(url=img_list[name])   
-	embed.set_footer(text="Ai-RO Rev.0")   
+	embed.set_footer(text="Ai-RO nightly1.0.30 Rev.0", icon_url="https://media.discordapp.net/attachments/882195139508989993/903823602498019368/1635558712041.png")   
 	return embed
 
 
