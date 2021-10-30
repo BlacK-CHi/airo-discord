@@ -242,7 +242,34 @@ async def _headspin(ctx:SlashContext):
 )
 async def _happygamja(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='gamjahappy'))
+
+#과제꺼져
+@slash.slash(
+	name="과제멈춰",
+	description="뇌ㅈ... 아니, 과제 멈춰!",
+	guild_ids=[gid]
+)
+async def _gwaje(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='gwaje'))
 	
+#(SNIVY)(BEAM)
+@slash.slash(
+	name="풀뱀빔",
+	description="이런! 당신은 풀뱀빔에 맞았습니다! 주리비얀 귀엽다 를 30초안에 쓰지 않으면 주리비얀이 되어버립니다!",
+	guild_ids=[gid]
+)
+async def _snivybeam(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='snivybeam'))
+
+#풀뱀이 주거써!
+@slash.slash(
+	name="풀뱀기절",
+	description="풀뱀이 주거써! 교수님이 주겨써!",
+	guild_ids=[gid]
+)
+async def _snivydead(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='snivyded'))
+
 #폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
 '''
 @slash.slash(
