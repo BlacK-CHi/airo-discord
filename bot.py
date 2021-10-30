@@ -198,6 +198,43 @@ async def _valentine(ctx:SlashContext):
 async def _boundaryofdeath(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='yujinhappy'))
 
+#폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
+@slash.slash(
+	name="폴라뽀담",
+	description="귀여운 왹져드론을 뽀담뽀담해보세요 함잡솨봐",
+    options=[
+        create_option( #뽀담뽀담 속도를 정하는 선택지를 만든다.
+            name="속도",
+            description="뽀담뽀담 속도!",
+            option_type=3,
+            required=False,
+            choices=[
+                create_choice(
+                    name='천천히', #기본값
+                    value='slow'
+                ),
+                create_choice(
+                    name='빠르게',
+                    value='fast'
+                )
+            ]
+        )
+    ],
+    connector={
+        '속도': 'speed' #속도로 받은 value값을 speed라는 변수로 처리해야 명령어에서 받을 수 있음!
+    }
+)
+async def _polarpet(ctx:SlashContext, speed:str='slow'): #speed의 기본값을 slow로 설정해서, 아무 인자를 넣지 않아도 자동으로 천천히 뽀담뽀담
+	if speed == 'slow':
+        name='polarpet'
+	elif speed == 'fast':
+        name='polarpetfast'
+	else:
+        raise ValueError('알 수 없는 옵션입니다.')
+	
+	await ctx.send(embed=embed_base(ctx=ctx, name=name)
+ 
+
 #A토끼 뽀담뽀담
 @slash.slash(
 	name="토끼뽀담",
