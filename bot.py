@@ -1,4 +1,5 @@
 #코드 작성 개시일자 2021년 10월 29일
+#리비전 0 가동 개시일자 2021년 10월 30일
 #물오주접방용 이미지 짤방 업로드 디스코드 봇
 
 import os, json, discord
@@ -314,6 +315,15 @@ async def _ptdead(ctx:SlashContext):
 )
 async def _mona(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='mona'))
+
+#깃허브 모나 귀여움
+@slash.slash(
+	name="치아라",
+	description="안할끼다",
+	guild_ids=[gid]
+)
+async def _fxxkit(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='fuckit'))
 
 #폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
 '''
