@@ -20,7 +20,7 @@ with open('imgres.json', 'r') as f:
 
 
 #임베드 뼈대용 함수 (명령어 단계에서 호출됨)
-def embed_base(name):
+def embed_base(ctx,name):
 	embed = discord.Embed(color=discord.Color.blue())
 	embed.set_author(name=ctx.author.display_name, icon_url=ctx.author.avatar_url)
 	embed.set_image(url=img_list[name])   
