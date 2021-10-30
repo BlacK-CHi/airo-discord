@@ -97,7 +97,7 @@ async def _foxbeam(ctx:SlashContext):
 	guild_ids=[gid]
 )
 async def _bonodrone(ctx:SlashContext):
-	await ctx.send(embed=embed_base(name='bonobono'))
+	await ctx.send(embed=embed_base(ctx,name='bonobono'))
 
 
 #-------------------코드의 끝----------------------
