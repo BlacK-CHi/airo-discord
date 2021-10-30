@@ -38,7 +38,7 @@ async def on_ready():
 
 #님캐결혼
 @slash.slash(
-	ctx, "님캐결혼",
+	name="님캐결혼",
 	description="님 캐. 나랑. 결혼.",
 	guild_ids=[gid]
 )
@@ -47,7 +47,7 @@ async def _mustmarry(ctx:SlashContext):
 
 #결혼식 초대짤
 @slash.slash(
-	ctx, "결혼식",
+	name="결혼식",
 	description="저.. 어머님 제가 어머님 자캐하고 결혼식을 하는데 참석해주세요",
 	guild_ids=[gid]
 )
@@ -56,7 +56,7 @@ async def _wantmarry(ctx:SlashContext):
 
 #월요일 싫어
 @slash.slash(
-	ctx, "월요일",
+	name="월요일",
 	description="월요일.. 그것은 개쓰레기요일.",
 	guild_ids=[gid]
 )
@@ -65,7 +65,7 @@ async def _monday(ctx:SlashContext):
 
 #출근 싫어
 @slash.slash(
-	ctx, "출근싫어",
+	name="출근싫어",
 	description="출근 싫어 (드러눕)",
 	guild_ids=[gid]
 )
@@ -74,7 +74,7 @@ async def _nowork(ctx:SlashContext):
 
 #존나빠름
 @slash.slash(
-	ctx, "존나빠름",
+	name="존나빠름",
 	description="I'm fast as fxxx boi, I'm fast as fxxx boi!!",
 	guild_ids=[gid]
 )
@@ -83,7 +83,7 @@ async def _fastasfuck(ctx:SlashContext):
 
 #여우투광등
 @slash.slash(
-	ctx, "여우찾기빔",
+	name="여우찾기빔",
 	description="그래서 이 분 어디로 가셨어요?",
 	guild_ids=[gid]
 )
@@ -92,7 +92,7 @@ async def _foxbeam(ctx:SlashContext):
 
 #드론 보노보노
 @slash.slash(
-	ctx, "드론과제",
+	name="드론과제",
 	description="왜 ㅈ같은 팀원들은 자기들만 바쁘다 생각할까? 한번 ㅈ되봐라지 난 휴학테크 탈 테니까",
 	guild_ids=[gid]
 )
