@@ -300,7 +300,7 @@ async def _pottired(ctx:SlashContext):
 #감자가 주거써!
 @slash.slash(
 	name="흐어어억",
-	description="풀뱀이 주거써! 교수님이 주겨써!",
+	description="퇴근시켜줘",
 	guild_ids=[gid]
 )
 async def _ptdead(ctx:SlashContext):
