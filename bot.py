@@ -20,7 +20,7 @@ with open('imgres.json', 'r') as f:
 
 
 #임베드 뼈대용 함수 (명령어 단계에서 호출됨)
-def embed_base(ctx,name):
+def embed_base(ctx=ctx, name=,name):
 	embed = discord.Embed(color=discord.Color.blue())
 	embed.set_author(name=ctx.author.display_name, icon_url=ctx.author.avatar_url)
 	embed.set_image(url=img_list[name])   
@@ -43,7 +43,7 @@ async def on_ready():
 	guild_ids=[gid]
 )
 async def _mustmarry(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx, 'mustmarry'))
+	await ctx.send(embed=embed_base(ctx=ctx, name='mustmarry'))
 
 #결혼식 초대짤
 @slash.slash(
@@ -52,7 +52,7 @@ async def _mustmarry(ctx:SlashContext):
 	guild_ids=[gid]
 )
 async def _wantmarry(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx, 'wantmarry'))
+	await ctx.send(embed=embed_base(ctx=ctx, name='wantmarry'))
 
 #월요일 싫어
 @slash.slash(
@@ -61,7 +61,7 @@ async def _wantmarry(ctx:SlashContext):
 	guild_ids=[gid]
 )
 async def _monday(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx, 'whymonday'))
+	await ctx.send(embed=embed_base(ctx=ctx, name='whymonday'))
 
 #출근 싫어
 @slash.slash(
@@ -70,7 +70,7 @@ async def _monday(ctx:SlashContext):
 	guild_ids=[gid]
 )
 async def _nowork(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx, 'nowork'))
+	await ctx.send(embed=embed_base(ctx=ctx, name='nowork'))
 
 #존나빠름
 @slash.slash(
@@ -79,7 +79,7 @@ async def _nowork(ctx:SlashContext):
 	guild_ids=[gid]
 )
 async def _fastasfuck(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx, 'fastfox'))
+	await ctx.send(embed=embed_base(ctx=ctx, name='fastfox'))
 
 #여우투광등
 @slash.slash(
@@ -88,7 +88,7 @@ async def _fastasfuck(ctx:SlashContext):
 	guild_ids=[gid]
 )
 async def _foxbeam(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx,'foxsearch'))
+	await ctx.send(embed=embed_base(ctx=ctx, name='foxsearch'))
 
 #드론 보노보노
 @slash.slash(
@@ -97,7 +97,7 @@ async def _foxbeam(ctx:SlashContext):
 	guild_ids=[gid]
 )
 async def _bonodrone(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx, 'bonobono'))
+	await ctx.send(embed=embed_base(ctx=ctx, name='bonobono'))
 
 
 #-------------------코드의 끝----------------------
