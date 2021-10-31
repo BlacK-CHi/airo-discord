@@ -336,8 +336,8 @@ async def _ppangy(ctx:SlashContext):
 
 #폼폼 고민
 @slash.slash(
-	name="폼폼고민",
-	description="폼폼이 고민 중...",
+	name="폼폼으쓱",
+	description="난 차장 폼폼이라구!",
 	guild_ids=[gid]
 )
 async def _pphmm(ctx:SlashContext):
