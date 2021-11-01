@@ -388,46 +388,32 @@ async def _ppgift(ctx:SlashContext):
 async def _ppsad(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='pp_sad'))
 
-
-
-
-#폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
-'''
+#폴라뽀담
 @slash.slash(
 	name="폴라뽀담",
-	description="귀여운 왹져드론을 뽀담뽀담해보세요 함잡솨봐",
+	description="귀여운 왹져정찰드론을 뽀담뽀담해보세요!",
 	options=[
-		create_option( #뽀담뽀담 속도를 정하는 선택지를 만든다.
+		create_option(
 			name="속도",
-			description="뽀담뽀담 속도!",
+			description="뽀담뽀담 속도를 정해주세요!",
 			option_type=3,
-			required=False,
+			required=True,
 			choices=[
 				create_choice(
-					name='천천히', #기본값
-					value='slow'
+					name="천천히",
+					value="slow"
 				),
 				create_choice(
-					name='빠르게',
-					value='fast'
+					name="빠르게",
+					value="fast"
 				)
 			]
 		)
-	],
-	connector={
-		'속도': 'speed' #속도로 받은 value값을 speed라는 변수로 처리해야 명령어에서 받을 수 있음!
-	}
+	]
 )
-async def _polarpet(ctx:SlashContext, speed:str='slow'): #speed의 기본값을 slow로 설정해서, 아무 인자를 넣지 않아도 자동으로 천천히 뽀담뽀담
-	if speed == 'slow':
-		await ctx.send(embed=embed_base(ctx=ctx, name='polarpet')
-	elif speed == 'fast':
-		await ctx.send(embed=embed_base(ctx=ctx, name='polarpetfast')
-	else:
-		embed = discord.Embed(title='오류', description='정의되지 않은 명령어에요!', color=discord.Color.red())
-		embed.set_footer(text="Ai-RO nightly1.0.30 Rev.0", icon_url="https://media.discordapp.net/attachments/882195139508989993/903823602498019368/1635558712041.png")
-		await ctx.send(embed=embed)
-'''
+
+#폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
+
 		
 #-------------------코드의 끝----------------------
 airo.run(token)
