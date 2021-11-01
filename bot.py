@@ -431,7 +431,7 @@ async def command_gall(ctx, gall_name, lang: str):
 	elif lang == 'ko':
 		text = f"{gall_name}에 오신것을 환영합니다."
 	elif lang == 'ja':
-        text = f"{gall_name}ギャラリーへようこそ。"
+		text = f"{gall_name}ギャラリーへようこそ。"
 	else:
 		raise ValueError('알 수 없는 언어인데스')
 
