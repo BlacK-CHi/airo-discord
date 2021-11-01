@@ -413,10 +413,10 @@ async def _ppsad(ctx:SlashContext):
 		'속도': 'speed'
 	}
 )
-async def _polarpet(ctx:SlashContext, sel:speed='slow'):
-	if sel == 'slow':
+async def _polarpet(ctx:SlashContext, speed:str='slow'):
+	if speed == 'slow':
 		pet_emb = embed_base(ctx=ctx, name='polarpet')
-	elif sel == 'fast':
+	elif speed == 'fast':
 		pet_emb = embed_base(ctx=ctx, name='polarpetfast')
 	
 	await ctx.send(embed=pet_emb)
