@@ -418,7 +418,7 @@ async def _ppsad(ctx:SlashContext):
 		'언어': 'lang'
 	}
 )
-async def command_gall(ctx, gall_name, lang: str):
+async def command_gall(ctx, lang: str):
 	if lang == 'en':
 		text = f"Welcome to the gallery."
 	elif lang == 'ko':
