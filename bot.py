@@ -409,7 +409,6 @@ async def _ppsad(ctx:SlashContext):
 					name="으쓱",
 					value="hmm"
 				)
-				"""
 				create_choice(
 					name="메모",
 					value="memo"
@@ -430,7 +429,6 @@ async def _ppsad(ctx:SlashContext):
 					name="슬픔",
 					value="sad"
 				)
-				"""
 			]
 		)
 	],
@@ -443,7 +441,6 @@ async def _pompom(ctx:SlashContext, emote:str):
 		pom_pom = embed_base(ctx=ctx, name='pp_angy')
 	elif emote == 'hmm':
 		pom_pom = embed_base(ctx=ctx, name='pp_hmm')
-	"""
 	elif emote == 'memo':
 		pom_pom = embed_base(ctx=ctx, name='pp_memo')
 	elif emote == 'love':
@@ -454,7 +451,6 @@ async def _pompom(ctx:SlashContext, emote:str):
 		pom_pom = embed_base(ctx=ctx, name='pp_gift')
 	elif emote == 'sad':
 		pom_pom = embed_base(ctx=ctx, name='pp_sad')
-	"""
 	
 	await ctx.send(embed=pom_pom)
 
