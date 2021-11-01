@@ -325,6 +325,7 @@ async def _mona(ctx:SlashContext):
 async def _fxxkit(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='fuckit'))
 
+"""
 #폼폼 화났어
 @slash.slash(
 	name="폼폼화남",
@@ -387,7 +388,43 @@ async def _ppgift(ctx:SlashContext):
 )
 async def _ppsad(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='pp_sad'))
+"""
 
+#폼폼티콘! (선택형 명령어)
+@slash.slash(
+	name="폼폼",
+	description="귀여운 왹져정찰드론을 뽀담뽀담해보세요!",
+	options=[
+		create_option(
+			name="속도",
+			description="뽀담뽀담할 속도",
+			option_type=3,
+			required=False,
+			choices=[
+				create_choice(
+					name="천천히",
+					value="slow"
+				),
+				create_choice(
+					name="빠르게",
+					value="fast"
+				)
+			]
+		)
+	],
+	connector={
+		'선택': 'sel'
+	}
+)
+async def _polarpet(ctx:SlashContext, speed:str='slow'):
+	if speed == 'slow':
+		pet_emb = embed_base(ctx=ctx, name='polarpet')
+	elif speed == 'fast':
+		pet_emb = embed_base(ctx=ctx, name='polarpetfast')
+	
+	await ctx.send(embed=pet_emb)
+
+#폴라 뽀담뽀담! (선택형 명령어)
 @slash.slash(
 	name="폴라뽀담",
 	description="귀여운 왹져정찰드론을 뽀담뽀담해보세요!",
