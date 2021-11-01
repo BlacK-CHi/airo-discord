@@ -418,6 +418,17 @@ async def _ppsad(ctx:SlashContext):
 		'언어': 'lang'
 	}
 )
+async def _gall(ctx:SlashContext, lang:str):
+	if lang == 'en':
+		text = "english"
+	elif lang == 'ko':
+		text = "한글"
+	elif lang == 'ja':
+		text = "Nihongo"
+	else:
+		raise ValueError('오류')
+	
+	await ctx.send(text)
 
 #폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
 
