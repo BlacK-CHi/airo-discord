@@ -394,12 +394,6 @@ async def _ppsad(ctx:SlashContext):
 	description="갤러리로 이동합니다.",
 	options=[
 		create_option(
-			name="이름",
-			description="갤러리의 이름을 입력해주세요.",
-			option_type=3,
-			required=True
-		),
-		create_option(
 			name="언어",
 			description="Put your language.",
 			option_type=3,
@@ -414,24 +408,23 @@ async def _ppsad(ctx:SlashContext):
 					value='ja'
 				),
 				create_choice(
-				name='english',
-				value='en'
+					name='english',
+					value='en'
 				)
 			]
 		)
 	],
 	connector={
-		'이름': 'gall_name',
 		'언어': 'lang'
 	}
 )
 async def command_gall(ctx, gall_name, lang: str):
 	if lang == 'en':
-		text = f"Welcome to the {gall_name} gallery."
+		text = f"Welcome to the gallery."
 	elif lang == 'ko':
-		text = f"{gall_name}에 오신것을 환영합니다."
+		text = f"에 오신것을 환영합니다."
 	elif lang == 'ja':
-		text = f"{gall_name}ギャラリーへようこそ。"
+		text = f"ギャラリーへようこそ。"
 	else:
 		raise ValueError('알 수 없는 언어인데스')
 
