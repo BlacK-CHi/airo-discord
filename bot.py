@@ -388,29 +388,54 @@ async def _ppgift(ctx:SlashContext):
 async def _ppsad(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='pp_sad'))
 
-#폴라뽀담
+#폴라
 @slash.slash(
-	name="폴라뽀담",
-	description="귀여운 왹져정찰드론을 뽀담뽀담해보세요!",
+	name="갤",
+	description="갤러리로 이동합니다.",
 	options=[
 		create_option(
-			name="속도",
-			description="뽀담뽀담 속도를 정해주세요!",
+			name="이름",
+			description="갤러리의 이름을 입력해주세요.",
+			option_type=3,
+			required=True
+		),
+		create_option(
+			name="언어",
+			description="Put your language.",
 			option_type=3,
 			required=True,
 			choices=[
 				create_choice(
-					name="천천히",
-					value="slow"
+					name='한국어',
+					value='ko'
 				),
 				create_choice(
-					name="빠르게",
-					value="fast"
+					name='日本語',
+					value='ja'
+				),
+				create_choice(
+				name='english',
+				value='en'
 				)
 			]
 		)
-	]
+	],
+	connector={
+		'이름': 'gall_name',
+		'언어': 'lang'
+	}
 )
+async def command_gall(ctx, gall_name, lang: str):
+	if lang == 'en':
+		text = f"Welcome to the {gall_name} gallery."
+	elif lang == 'ko':
+		text = f"{gall_name}에 오신것을 환영합니다."
+	elif lang == 'ja':
+        text = f"{gall_name}ギャラリーへようこそ。"
+	else:
+		raise ValueError('알 수 없는 언어인데스')
+
+	await ctx.send(text)
 
 #폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
 
