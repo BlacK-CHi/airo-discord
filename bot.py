@@ -1,6 +1,10 @@
-#코드 작성 개시일자 2021년 10월 29일
-#리비전 0 가동 개시일자 2021년 10월 30일
-#물오주접방용 이미지 짤방 업로드 디스코드 봇
+"""
+코드 작성 개시일자 2021년 10월 29일
+리비전 0 가동 개시일자 2021년 10월 30일
+물오주접방용 이미지 짤방 업로드 디스코드 봇
+
+해야 하는 작업 : 2022년 4월 전에 다른 라이브러리로 교체하기 (PyCord, Discorpy 등)
+"""
 
 import os, json, discord
 from discord.ext import commands
@@ -325,70 +329,6 @@ async def _mona(ctx:SlashContext):
 async def _fxxkit(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='fuckit'))
 
-"""
-#폼폼 화났어
-@slash.slash(
-	name="폼폼화남",
-	description="폼폼이 화났어!",
-	guild_ids=[gid]
-)
-async def _ppangy(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='pp_angy'))
-
-#폼폼 고민
-@slash.slash(
-	name="폼폼으쓱",
-	description="난 차장 폼폼이라구!",
-	guild_ids=[gid]
-)
-async def _pphmm(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='pp_hmm'))
-	
-#폼폼 사랑해
-@slash.slash(
-	name="폼폼하트",
-	description="폼폼이 사랑해!",
-	guild_ids=[gid]
-)
-async def _pplove(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='pp_love'))
-
-#폼폼 메모
-@slash.slash(
-	name="폼폼메모",
-	description="폼폼이 메모 중...",
-	guild_ids=[gid]
-)
-async def _ppmemo(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='pp_memo'))
-	
-#폼폼 오캐이
-@slash.slash(
-	name="폼폼오케이",
-	description="폼폼이도 좋아!",
-	guild_ids=[gid]
-)
-async def _ppokay(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='pp_ok'))
-
-#폼폼 선물!
-@slash.slash(
-	name="폼폼선물",
-	description="폼폼이가 주는 선물!",
-	guild_ids=[gid]
-)
-async def _ppgift(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='pp_gift'))
-	
-#폼폼 슬퍼...
-@slash.slash(
-	name="폼폼슬픔",
-	description="폼폼 슬퍼...",
-	guild_ids=[gid]
-)
-async def _ppsad(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='pp_sad'))
-"""
 
 #폼폼티콘! (선택형 명령어)
 @slash.slash(
