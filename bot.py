@@ -418,17 +418,6 @@ async def _ppsad(ctx:SlashContext):
 		'언어': 'lang'
 	}
 )
-async def command_gall(ctx, lang: str):
-	if lang == 'en':
-		text = f"Welcome to the gallery."
-	elif lang == 'ko':
-		text = f"에 오신것을 환영합니다."
-	elif lang == 'ja':
-		text = f"ギャラリーへようこそ。"
-	else:
-		raise ValueError('알 수 없는 언어인데스')
-
-	await ctx.send(text)
 
 #폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
 
