@@ -393,27 +393,46 @@ async def _ppsad(ctx:SlashContext):
 #폼폼티콘! (선택형 명령어)
 @slash.slash(
 	name="폼폼",
-	description="귀여운 왹져정찰드론을 뽀담뽀담해보세요!",
+	description="붕괴:스타레일의 귀여운 토끼(?) 차장 폼폼 이모티콘(무려 공식임)!",
 	options=[
 		create_option(
-			name="속도",
-			description="뽀담뽀담할 속도",
+			name="이모지",
 			option_type=3,
 			required=False,
 			choices=[
 				create_choice(
-					name="천천히",
-					value="slow"
+					name="화남",
+					value="angy"
 				),
 				create_choice(
-					name="빠르게",
-					value="fast"
+					name="으쓱",
+					value="hmm"
+				),
+				create_choice(
+					name="메모",
+					value="memo"
+				),
+				create_choice(
+					name="하트",
+					value="love"
+				),
+				create_choice(
+					name="오케이",
+					value="okay"
+				),
+				create_choice(
+					name="선물",
+					value="gift"
+				),
+				create_choice(
+					name="슬픔",
+					value="sad"
 				)
 			]
 		)
 	],
 	connector={
-		'선택': 'sel'
+		'이모지': 'emote'
 	}
 )
 async def _polarpet(ctx:SlashContext, speed:str='slow'):
@@ -421,6 +440,11 @@ async def _polarpet(ctx:SlashContext, speed:str='slow'):
 		pet_emb = embed_base(ctx=ctx, name='polarpet')
 	elif speed == 'fast':
 		pet_emb = embed_base(ctx=ctx, name='polarpetfast')
+	elif speed == 'fast':
+		pet_emb = embed_base(ctx=ctx, name='polarpetfast')
+	elif speed == 'fast':
+		pet_emb = embed_base(ctx=ctx, name='polarpetfast')
+	
 	
 	await ctx.send(embed=pet_emb)
 
