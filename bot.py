@@ -389,84 +389,37 @@ async def _ppsad(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='pp_sad'))
 
 @slash.slash(
-	name="테스트",
-	description="선택 컨택스트 메뉴 테스트 명령어입니다.",
+	name="폴라뽀담",
+	description="귀여운 왹져정찰드론을 뽀담뽀담해보세요!",
 	options=[
 		create_option(
-			name="선택항목",
-			description="테스트용 선택항목입니다.",
+			name="속도",
+			description="뽀담뽀담할 속도",
 			option_type=3,
-			required=True,
+			required=False,
 			choices=[
 				create_choice(
-					name="선택1",
-					value="sel01"
+					name="천천히",
+					value="slow"
 				),
 				create_choice(
-					name="선택2",
-					value="sel02"
+					name="빠르게",
+					value="fast"
 				)
 			]
 		)
 	],
 	connector={
-		'선택항목': 'sel'
+		'속도': 'speed'
 	}
 )
-async def _testsel(ctx:SlashContext, sel:str):
-	if sel == 'sel01':
-		text = "1번 선택지를 선택함."
-	elif sel == 'sel02':
-		text = "2번 선택지를 선택함."
-	else:
-		text = "선택지 범위 초과."
+async def _polarpet(ctx:SlashContext, sel:speed='slow'):
+	if sel == 'slow':
+		pet_emb = embed_base(ctx=ctx, name='polarpet')
+	elif sel == 'fast':
+		pet_emb = embed_base(ctx=ctx, name='polarpetfast')
 	
-	await ctx.send(text)
-
-'''
-#폴라
-@slash.slash(
-	name="갤",
-	description="갤러리로 이동합니다.",
-	options=[
-		create_option(
-			name="언어",
-			description="Put your language.",
-			option_type=3,
-			required=True,
-			choices=[
-				create_choice(
-					name='한국어',
-					value='ko'
-				),
-				create_choice(
-					name='日本語',
-					value='ja'
-				),
-				create_choice(
-					name='english',
-					value='en'
-				)
-			]
-		)
-	],
-	connector={
-		'언어': 'lang'
-	}
-)
-async def _gall(ctx:SlashContext, lang:str):
-	if lang == 'en':
-		text = "english"
-	elif lang == 'ko':
-		text = "한글"
-	elif lang == 'ja':
-		text = "Nihongo"
-	else:
-		raise ValueError('오류')
-	
-	await ctx.send(text)
-'''
-#폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
+	await ctx.send(embed=pet_emb)
 
 		
 #-------------------코드의 끝----------------------
