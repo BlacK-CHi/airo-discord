@@ -413,7 +413,7 @@ async def _ppsad(ctx:SlashContext):
 		'선택항목': 'sel'
 	}
 )
-async def _testsel(ctx:SlashContext, lang:str):
+async def _testsel(ctx:SlashContext, sel:str):
 	if sel == 'sel01':
 		text = "1번 선택지를 선택함."
 	elif sel == 'sel02':
