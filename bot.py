@@ -435,18 +435,23 @@ async def _ppsad(ctx:SlashContext):
 		'이모지': 'emote'
 	}
 )
-async def _polarpet(ctx:SlashContext, speed:str='slow'):
-	if speed == 'slow':
-		pet_emb = embed_base(ctx=ctx, name='polarpet')
-	elif speed == 'fast':
-		pet_emb = embed_base(ctx=ctx, name='polarpetfast')
-	elif speed == 'fast':
-		pet_emb = embed_base(ctx=ctx, name='polarpetfast')
-	elif speed == 'fast':
-		pet_emb = embed_base(ctx=ctx, name='polarpetfast')
+async def _pompom(ctx:SlashContext, emote:str):
+	if emote == 'angy':
+		pom_pom = embed_base(ctx=ctx, name='pp_angy')
+	elif emote == 'hmm':
+		pom_pom = embed_base(ctx=ctx, name='pp_hmm')
+	elif emote == 'memo':
+		pom_pom = embed_base(ctx=ctx, name='pp_memo')
+	elif emote == 'love':
+		pom_pom = embed_base(ctx=ctx, name='pp_love')
+	elif emote == 'okay':
+		pim_pom = embed_base(ctx=ctx, name='pp_ok')
+	elif emote == 'gift':
+		pom_pom = embed_base(ctx=ctx, name='pp_gift')
+	elif emote == 'sad':
+		pom_pom = embed_base(ctx=ctx, name='pp_sad')
 	
-	
-	await ctx.send(embed=pet_emb)
+	await ctx.send(embed=pom_pom)
 
 #폴라 뽀담뽀담! (선택형 명령어)
 @slash.slash(
