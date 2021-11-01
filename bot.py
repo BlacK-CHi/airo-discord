@@ -14,7 +14,7 @@ from discord_slash.utils.manage_commands import create_choice, create_option
 airo = commands.Bot(command_prefix='+', description='이미지 짤방이라면 저에게 맡겨주세요!', status=discord.Status.online, activity=discord.Game("이미지 정리"))
 token = os.environ['token']
 slash = SlashCommand(airo, sync_commands=True)
-gid = 891712136689119242
+gid = [891712136689119242, 864146887627767858]
 
 
 #imgres.json 이미지파일 정보 데이터베이스 불러오기
@@ -45,7 +45,7 @@ async def on_ready():
 @slash.slash(
 	name="님캐결혼",
 	description="님 캐. 나랑. 결혼.",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _mustmarry(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='mustmarry'))
@@ -54,7 +54,7 @@ async def _mustmarry(ctx:SlashContext):
 @slash.slash(
 	name="결혼식",
 	description="저.. 어머님 제가 어머님 자캐하고 결혼식을 하는데 참석해주세요",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _wantmarry(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='wantmarry'))
@@ -63,7 +63,7 @@ async def _wantmarry(ctx:SlashContext):
 @slash.slash(
 	name="월요일",
 	description="월요일.. 그것은 개쓰레기요일.",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _monday(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='whymonday'))
@@ -72,7 +72,7 @@ async def _monday(ctx:SlashContext):
 @slash.slash(
 	name="출근싫어",
 	description="출근 싫어 (드러눕)",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _nowork(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='nowork'))
@@ -81,7 +81,7 @@ async def _nowork(ctx:SlashContext):
 @slash.slash(
 	name="존나빠름",
 	description="I'm fast as fxxx boi, I'm fast as fxxx boi!!",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _fastasfuck(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='fastfox'))
@@ -90,7 +90,7 @@ async def _fastasfuck(ctx:SlashContext):
 @slash.slash(
 	name="여우찾기빔",
 	description="그래서 이 분 어디로 가셨어요?",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _foxbeam(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='foxsearch'))
@@ -99,7 +99,7 @@ async def _foxbeam(ctx:SlashContext):
 @slash.slash(
 	name="드론과제",
 	description="왜 ㅈ같은 팀원들은 자기들만 바쁘다 생각할까? 한번 ㅈ되봐라지 난 휴학테크 탈 테니까",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _bonodrone(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='bonobono'))
@@ -108,7 +108,7 @@ async def _bonodrone(ctx:SlashContext):
 @slash.slash(
 	name="문부숨",
 	description="안나오면 쳐들어간다 (쿵짝짝쿵짝)",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _doorslam(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='doorgamja'))
@@ -117,7 +117,7 @@ async def _doorslam(ctx:SlashContext):
 @slash.slash(
 	name="퇴근",
 	description="퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근퇴근제발퇴근퇴근퇴근",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _exitwork(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='endwork'))
@@ -126,7 +126,7 @@ async def _exitwork(ctx:SlashContext):
 @slash.slash(
 	name="출근감자",
 	description="출근.. 해야.. 하는거야...? (울먹)",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _whywork(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='whywork'))
@@ -135,7 +135,7 @@ async def _whywork(ctx:SlashContext):
 @slash.slash(
 	name="smol",
 	description="작고 소듕하고 귀여운 아오",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _smol(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='aotiny'))
@@ -144,7 +144,7 @@ async def _smol(ctx:SlashContext):
 @slash.slash(
 	name="게이사물향",
 	description="음~ 이것은 게이사물의 향기.",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _gsaroma(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='gsaroma'))
@@ -153,7 +153,7 @@ async def _gsaroma(ctx:SlashContext):
 @slash.slash(
 	name="3게이사물",
 	description=":gaysamulfox: :gaysamul: :gaysamuldrone:",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _3gsm(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='3gaysamul'))
@@ -162,7 +162,7 @@ async def _3gsm(ctx:SlashContext):
 @slash.slash(
 	name="아뇨",
 	description="아뇨, 드론인데요?",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _nodrone(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='nodrone'))
@@ -171,7 +171,7 @@ async def _nodrone(ctx:SlashContext):
 @slash.slash(
 	name="드론프린터",
 	description="(게이사물 연성 출력 중)",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _droneprint(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='droneprint'))
@@ -180,7 +180,7 @@ async def _droneprint(ctx:SlashContext):
 @slash.slash(
 	name="POTATO",
 	description="I EAT POTATO",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _eatpotato(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='eatpotato'))
@@ -189,7 +189,7 @@ async def _eatpotato(ctx:SlashContext):
 @slash.slash(
 	name="부장님",
 	description="부장님! 이게 말이 된다고 생각하십니까!",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _valentine(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='doorslayer'))
@@ -198,7 +198,7 @@ async def _valentine(ctx:SlashContext):
 @slash.slash(
 	name="유진만족",
 	description="삭여라, 그리고 새겨라, 바꾸고 싶다면 사겨라. 돈과 명예, 그리고 사경이 제일인 세상이다.",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _boundaryofdeath(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='yujinhappy'))
@@ -207,7 +207,7 @@ async def _boundaryofdeath(ctx:SlashContext):
 @slash.slash(
 	name="토끼뽀담",
 	description="토끼는 귀여워!",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _tokipet(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='tokipet'))
@@ -216,7 +216,7 @@ async def _tokipet(ctx:SlashContext):
 @slash.slash(
 	name="여우뽀담",
 	description="여우도 귀여워!",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _foxpet(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='foxpet'))
@@ -225,7 +225,7 @@ async def _foxpet(ctx:SlashContext):
 @slash.slash(
 	name="띵킹",
 	description="이게 맞나...? 아니 이게 맞나? 진짜? 장난 아니라?",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _thonk(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='thonk'))
@@ -234,7 +234,7 @@ async def _thonk(ctx:SlashContext):
 @slash.slash(
 	name="헤드스핀",
 	description="무야호!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _headspin(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='headspin'))
@@ -243,7 +243,7 @@ async def _headspin(ctx:SlashContext):
 @slash.slash(
 	name="폴짝감자",
 	description="갓캐를 보고 매우 행복해하며 폴짝폴짝 뛰는 감자라고라...!",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _happygamja(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='gamjahappy'))
@@ -252,7 +252,7 @@ async def _happygamja(ctx:SlashContext):
 @slash.slash(
 	name="과제멈춰",
 	description="뇌ㅈ... 아니, 과제 멈춰!",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _gwaje(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='gwaje'))
@@ -261,7 +261,7 @@ async def _gwaje(ctx:SlashContext):
 @slash.slash(
 	name="풀뱀빔",
 	description="이런! 당신은 풀뱀빔에 맞았습니다! 주리비얀 귀엽다 를 30초안에 쓰지 않으면 주리비얀이 되어버립니다!",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _snivybeam(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='snivybeam'))
@@ -270,7 +270,7 @@ async def _snivybeam(ctx:SlashContext):
 @slash.slash(
 	name="풀뱀기절",
 	description="풀뱀이 주거써! 교수님이 주겨써!",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _snivydead(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='snivyded'))
@@ -279,7 +279,7 @@ async def _snivydead(ctx:SlashContext):
 @slash.slash(
 	name="광합성",
 	description="fuck im hungry / delicious",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _pthungry(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='delicious'))
@@ -288,7 +288,7 @@ async def _pthungry(ctx:SlashContext):
 @slash.slash(
 	name="여우피곤",
 	description="뭔가 그리곤 싶은데 피곤함",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _chitired(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='chiwant'))
@@ -297,7 +297,7 @@ async def _chitired(ctx:SlashContext):
 @slash.slash(
 	name="감자피곤",
 	description="뭔가 그리곤 싶은데 피곤함",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _pottired(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='ptwant'))
@@ -306,7 +306,7 @@ async def _pottired(ctx:SlashContext):
 @slash.slash(
 	name="흐어어억",
 	description="퇴근시켜줘",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _ptdead(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='pttired'))
@@ -315,7 +315,7 @@ async def _ptdead(ctx:SlashContext):
 @slash.slash(
 	name="모나",
 	description="그냥 귀여워서 끼워넣은 깃허브 움짤",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _mona(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='mona'))
@@ -324,7 +324,7 @@ async def _mona(ctx:SlashContext):
 @slash.slash(
 	name="치아라",
 	description="안할끼다",
-	guild_ids=[gid]
+	guild_ids=gid
 )
 async def _fxxkit(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='fuckit'))
