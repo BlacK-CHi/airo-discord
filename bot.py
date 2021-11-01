@@ -408,7 +408,7 @@ async def _ppsad(ctx:SlashContext):
 				create_choice(
 					name="으쓱",
 					value="hmm"
-				)
+				),
 				create_choice(
 					name="메모",
 					value="memo"
