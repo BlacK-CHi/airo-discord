@@ -388,6 +388,42 @@ async def _ppgift(ctx:SlashContext):
 async def _ppsad(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='pp_sad'))
 
+@slash.slash(
+	name="테스트",
+	description="선택 컨택스트 메뉴 테스트 명령어입니다.",
+	options=[
+		create_option(
+			name="선택항목",
+			description="테스트용 선택항목입니다.",
+			option_type=3,
+			required=True,
+			choices=[
+				create_choice(
+					name="선택1",
+					value="sel01"
+				),
+				create_choice(
+					name="선택2",
+					value="sel02"
+				)
+			]
+		)
+	],
+	connector={
+		'선택항목': 'sel'
+	}
+)
+async def _testsel(ctx:SlashContext, lang:str):
+	if sel == 'sel01':
+		text = "1번 선택지를 선택함."
+	elif sel == 'sel02':
+		text = "2번 선택지를 선택함."
+	else:
+		text = "선택지 범위 초과."
+	
+	await ctx.send(text)
+
+'''
 #폴라
 @slash.slash(
 	name="갤",
@@ -429,7 +465,7 @@ async def _gall(ctx:SlashContext, lang:str):
 		raise ValueError('오류')
 	
 	await ctx.send(text)
-
+'''
 #폴라 뽀담뽀담 *아마 제일 복잡한 명령어일 듯?*
 
 		
