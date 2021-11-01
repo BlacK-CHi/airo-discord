@@ -397,6 +397,7 @@ async def _ppsad(ctx:SlashContext):
 	options=[
 		create_option(
 			name="이모지",
+			description="폼폼 이모지 종류를 선택해주세요!"
 			option_type=3,
 			required=False,
 			choices=[
