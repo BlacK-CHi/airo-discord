@@ -399,7 +399,7 @@ async def _ppsad(ctx:SlashContext):
 			name="이모지",
 			description="폼폼 이모지 종류를 선택해주세요!"
 			option_type=3,
-			required=False,
+			required=True,
 			choices=[
 				create_choice(
 					name="화남",
@@ -446,7 +446,7 @@ async def _pompom(ctx:SlashContext, emote:str):
 	elif emote == 'love':
 		pom_pom = embed_base(ctx=ctx, name='pp_love')
 	elif emote == 'okay':
-		pim_pom = embed_base(ctx=ctx, name='pp_ok')
+		pom_pom = embed_base(ctx=ctx, name='pp_ok')
 	elif emote == 'gift':
 		pom_pom = embed_base(ctx=ctx, name='pp_gift')
 	elif emote == 'sad':
