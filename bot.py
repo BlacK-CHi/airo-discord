@@ -329,11 +329,21 @@ async def _mona(ctx:SlashContext):
 async def _fxxkit(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='fuckit'))
 
+#많은 일이 있었지..
+@slash.slash(
+	name="많고많은일",
+	description="나 너무많은일이 있었어... 힘들다진짜",
+	guild_ids=gid
+)
+async def _lotwork(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='lotsof'))
+
 
 #폼폼티콘! (선택형 명령어)
 @slash.slash(
 	name="폼폼",
 	description="붕괴:스타레일의 귀여운 토끼(?) 차장 폼폼 이모티콘(무려 공식임)!",
+	guild_ids=gid,
 	options=[
 		create_option(
 			name="이모지",
@@ -398,6 +408,7 @@ async def _pompom(ctx:SlashContext, emote:str):
 @slash.slash(
 	name="폴라뽀담",
 	description="귀여운 왹져정찰드론을 뽀담뽀담해보세요!",
+	guild_ids=gid,
 	options=[
 		create_option(
 			name="속도",
