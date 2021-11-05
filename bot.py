@@ -347,6 +347,33 @@ async def _lotwork(ctx:SlashContext):
 async def _peas(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='peas'))
 
+#메랑지 뽀담뽀담...
+@slash.slash(
+	name="메랑지뽀담",
+	description="싹난감ㅈ 아니 메랑지도 귀여워!",
+	guild_ids=gid
+)
+async def _merangy(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='merangy'))
+
+#(폴라 님 이 퇴장하섰습니다)
+@slash.slash(
+	name="폴라퇴장",
+	description="퇴장이라기보다는 납치당하는 거 같음",
+	guild_ids=gid
+)
+async def _pleave(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='polarout'))
+
+#굿바이(사라짐)
+@slash.slash(
+	name="폴라사라짐",
+	description="원본 밈 영상 아시는 분 제보바람",
+	guild_ids=gid
+)
+async def _pvan(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='polvanish'))
+
 
 #폼폼티콘! (선택형 명령어)
 @slash.slash(
