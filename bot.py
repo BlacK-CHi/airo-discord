@@ -338,6 +338,15 @@ async def _fxxkit(ctx:SlashContext):
 async def _lotwork(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='lotsof'))
 
+#give me a whole tray of P E A S
+@slash.slash(
+	name="콩",
+	description="Give me a whole tray of..... P E A S",
+	guild_ids=gid
+)
+async def _peas(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='peas'))
+
 
 #폼폼티콘! (선택형 명령어)
 @slash.slash(
