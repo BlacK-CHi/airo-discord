@@ -382,6 +382,15 @@ async def _coming(ctx:SlashContext):
 )
 async def _pvan(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='polvanish'))
+	
+#불속성드론
+@slash.slash(
+	name="불속성드론",
+	description="화르륵",
+	guild_ids=gid
+)
+async def _pfire(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='firedrone'))
 
 
 
