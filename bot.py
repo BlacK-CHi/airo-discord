@@ -419,7 +419,14 @@ async def _moning(ctx:SlashContext):
 async def _lazy(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='lazydance'))
 
-
+#셀프수확하는 감자
+@slash.slash(
+	name="셀프수확",
+	description="내레이션 : 야생의 감자라고라는 갓캐를보면 셀프수확을 하는 습성이 있습니다",
+	guild_ids=gid
+)
+async def _selfhavest(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='selfhavest'))
 
 #폼폼티콘! (선택형 명령어)
 @slash.slash(
