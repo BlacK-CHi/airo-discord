@@ -426,7 +426,7 @@ async def _lazy(ctx:SlashContext):
 	guild_ids=gid
 )
 async def _selfhavest(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='selfhavest'))
+	await ctx.send(embed=embed_base(ctx=ctx, name='selfhav'))
 
 #폼폼티콘! (선택형 명령어)
 @slash.slash(
