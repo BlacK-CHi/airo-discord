@@ -104,15 +104,6 @@ async def _foxbeam(ctx:SlashContext):
 async def _bonodrone(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='bonobono'))
 
-#감자 도어슬램
-@slash.slash(
-	name="문부숨",
-	description="안나오면 쳐들어간다 (쿵짝짝쿵짝)",
-	guild_ids=gid
-)
-async def _doorslam(ctx:SlashContext):
-	await ctx.send(embed=embed_base(ctx=ctx, name='doorgamja'))
-
 #퇴근
 @slash.slash(
 	name="퇴근",
@@ -365,6 +356,24 @@ async def _merangy(ctx:SlashContext):
 async def _pleave(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='polarout'))
 
+#SMOL
+@slash.slash(
+	name="스몰드론",
+	description="(장난 아니라 진짜 설정상 스몰하던 걸로 기억함)(그나마)",
+	guild_ids=gid
+)
+async def _smool(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='smoldrone'))
+
+#(still so fast as fxxk boiiiii)
+@slash.slash(
+	name="폴라쫓아옴",
+	description="함!!!!! 잡솨봐!!!!!(superfast)",
+	guild_ids=gid
+)
+async def _coming(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='speedpol'))
+
 #굿바이(사라짐)
 @slash.slash(
 	name="폴라사라짐",
@@ -373,6 +382,7 @@ async def _pleave(ctx:SlashContext):
 )
 async def _pvan(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='polvanish'))
+
 
 
 #폼폼티콘! (선택형 명령어)
@@ -475,6 +485,39 @@ async def _polarpet(ctx:SlashContext, speed:str='slow'):
 	
 	await ctx.send(embed=pet_emb)
 
+@slash.slash(
+	name="히얼쓰",
+	description="(문 부서지는 소리)",
+	guild_ids=gid,
+	options=[
+		create_option(
+			name="누구",
+			description="(빼꼼)",
+			option_type=3,
+			required=True,
+			choices=[
+				create_choice(
+					name="감자",
+					value="potato"
+				),
+				create_choice(
+					name="드론",
+					value="drone"
+				)
+			]
+		)
+	],
+	connector={
+		'누구': 'who'
+	}
+)
+async def _doorcrack(ctx:SlashContext):
+	if who == 'potato':
+		dooremb = embed_base(ctx=ctx, name='doorgamja')
+	elif who == 'drone':
+		dooremb = embed_base(ctx=ctx, name='doordrone')
+	
+	await ctx.send(embed=dooremb)
 		
 #-------------------코드의 끝----------------------
 airo.run(token)
