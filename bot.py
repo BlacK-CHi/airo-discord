@@ -392,6 +392,33 @@ async def _pvan(ctx:SlashContext):
 async def _pfire(ctx:SlashContext):
 	await ctx.send(embed=embed_base(ctx=ctx, name='firedrone'))
 
+#납작드론
+@slash.slash(
+	name="납작드론",
+	description="에잇 납작해져라!!! (폭*8)",
+	guild_ids=gid
+)
+async def _napjak(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='napjak'))
+
+#왜...?
+@slash.slash(
+	name="눈물젖은모닝빵",
+	description="....왜?(눈물젖은모닝빵)",
+	guild_ids=gid
+)
+async def _moning(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='why'))
+
+#오늘도 아무것도 안했다 춤
+@slash.slash(
+	name="암것도안함",
+	description="(오늘도 아무것도 안했다 춤)",
+	guild_ids=gid
+)
+async def _lazy(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='lazydance'))
+
 
 
 #폼폼티콘! (선택형 명령어)
