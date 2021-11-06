@@ -511,7 +511,7 @@ async def _polarpet(ctx:SlashContext, speed:str='slow'):
 		'누구': 'who'
 	}
 )
-async def _doorcrack(ctx:SlashContext):
+async def _doorcrack(ctx:SlashContext, who:str):
 	if who == 'potato':
 		dooremb = embed_base(ctx=ctx, name='doorgamja')
 	elif who == 'drone':
