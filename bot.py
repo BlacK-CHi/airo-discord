@@ -14,7 +14,7 @@ from discord_slash.utils.manage_commands import create_choice, create_option
 airo = commands.Bot(command_prefix='+', description='이미지 짤방이라면 저에게 맡겨주세요!', status=discord.Status.online, activity=discord.Game("이미지 정리"))
 token = os.environ['token']
 slash = SlashCommand(airo, sync_commands=True)
-gid = [891712136689119242, 864146887627767858]
+gid = [891712136689119242, 864146887627767858, 833727782356779008]
 
 
 #imgres.json 이미지파일 정보 데이터베이스 불러오기
