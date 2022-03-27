@@ -561,7 +561,88 @@ async def _doorcrack(ctx:SlashContext, who:str):
 		dooremb = embed_base(ctx=ctx, name='doordrone')
 	
 	await ctx.send(embed=dooremb)
-		
+
+#저기 보세요, 야생의 드론이 방송을 기대하고 있군요
+@slash.slash(
+	name="기대만발",
+	description="(대충 존1나게 방송을 기대하고 있는 폴라의 모습)",
+	guild_ids=gid
+)
+async def _expectdrone(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='expectdrone'))
+
+#저런, 오늘은 휴방이군요! 아니, 결방인가?
+@slash.slash(
+	name="결방",
+	description="(대충 팝콘 바닥에 떨어지는 소리)",
+	guild_ids=gid
+)
+async def _todayisrest(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='nobctoday'))
+
+#주접참기
+@slash.slash(
+	name="주접참기",
+	description="*i hav no speaker but i must squeal*",
+	guild_ids=gid
+)
+async def _squeal(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='squeal'))
+
+#가보자고
+@slash.slash(
+	name="ㄱㅂㅈㄱ",
+	description="#ㄱㅂㅈㄱ",
+	guild_ids=gid
+)
+async def _letsgoooo(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='YOLOOOOO'))
+
+#아니 근데 진짜 왜 감자가 드론 스팽킹하는 짤이 왜 아니 스팽킹인가 모르겠다 ㅅㅂ
+@slash.slash(
+	name="찰삭찰삭",
+	description="아니 진짜 주석에도 적었지만 이건 내가 뭐라고 표현해야 할지 모르겠다 찰지구나?",
+	guild_ids=gid
+)
+async def _niceass(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='niceass'))
+
+#이놈의 집구석(티로 꺼지면서 옮겨온 거)
+@slash.slash(
+	name="이놈의집구석",
+	description="씨발 집구석 진짜 내가 진짜 짜증나는데 참는다 ㅅㅂ....",
+	guild_ids=gid
+)
+async def _fuckthishouse(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='fth'))
+
+#카토 씰룩짤이요? 이건 귀하군요
+@slash.slash(
+	name="카토댄스",
+	description="우리 귀여운 커피톡기 카토 춤추는 것도 귀엽지 응응",
+	guild_ids=gid
+)
+async def _catodance(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='catodance'))
+
+#무기력의 댄스~ (but 감자)
+@slash.slash(
+	name="무기력감자",
+	description="- 이 감자 죽었는데요? / - 안 죽었음 ㅇㅇ",
+	guild_ids=gid
+)
+async def _noengamza(ctx:SlashContext):
+	await ctx.send(embed=embed_base(ctx=ctx, name='gamjaknockdown'))
+
+#인 제 인 남
+@slash.slash(
+        name="인제인남",
+        description="인 제 인 남 (뭐 이거 맞잖아 설명이 이거밖에 없다고 뭐라하지마요)",
+        guild_ids=gid
+)
+async def _justwokeup(ctx:SlashContext):
+        await ctx.send(embed=embed_base(ctx=ctx, name='justwokeup'))
+
 #-------------------코드의 끝----------------------
 airo.run(token)
 
